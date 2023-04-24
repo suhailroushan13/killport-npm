@@ -7,7 +7,7 @@ A simple command-line utility that kills the process running on a specified port
 To use the script, follow these steps:
 
 ```bash
-sudo npm istall killport-npm
+sudo npm install killport-npm
 killport
 ```
 
