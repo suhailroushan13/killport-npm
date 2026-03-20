@@ -1,10 +1,28 @@
 {
   "name": "killport-npm",
-  "version": "1.0.4",
-  "description": "killport-npm package would take a port number as an argument and then find the process using that port. After identifying the process, it would terminate it, effectively \"killing\" the port and freeing it up for other processes to use.",
-  "main": "script.sh",
+  "version": "2.0.0",
+  "description": "CLI to find the process listening on a TCP port and terminate it. Works on Windows, macOS, Linux, and WSL.",
+  "main": "bin/killport.js",
+  "bin": {
+    "killport": "bin/killport.js",
+    "killport-npm": "bin/killport.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "scripts/preinstall.js",
+    "scripts/postinstall.js",
+    "scripts/wsl.js",
+    "README.md"
+  ],
   "scripts": {
-    "postinstall": "bash script.sh"
+    "preinstall": "node scripts/preinstall.js",
+    "postinstall": "node scripts/postinstall.js",
+    "prepublishOnly": "node scripts/prepublish.js",
+    "test": "node test/parse.test.js"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "repository": {
     "type": "git",
@@ -13,9 +31,15 @@
   "keywords": [
     "kill",
     "port",
-    "losf",
+    "lsof",
     "terminate",
-    "process"
+    "process",
+    "cli",
+    "windows",
+    "wsl",
+    "pnpm",
+    "npm",
+    "yarn"
   ],
   "author": "Suhail Roushan",
   "license": "MIT",
