@@ -1,6 +1,6 @@
 {
   "name": "killport-npm",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "CLI to find the process listening on a TCP port and terminate it. Works on Windows, macOS, Linux, and WSL.",
   "main": "bin/killport.js",
   "bin": {
